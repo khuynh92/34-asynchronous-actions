@@ -1,0 +1,18 @@
+* {
+  font-family: Arial, Helvetica, sans-serif; }
+
+#expense-update {
+  border: 3px solid #f5ff82; }
+
+#expense-update * {
+  margin-left: 2px; }
+
+#expenses button {
+  margin-right: 10px; }
+
+#expenses li {
+  display: flex; }
+
+#expense-update input[type=submit] {
+  margin-left: 55px; }
+

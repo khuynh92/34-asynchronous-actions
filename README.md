@@ -1,39 +1,24 @@
-![cf](http://i.imgur.com/7v5ASc8.png) Async Actions
-===
+[![Build Status](https://travis-ci.com/khuynh92/34-asynchronous-actions.svg?branch=master)](https://travis-ci.com/khuynh92/34-asynchronous-actions)
 
-## Submission Instructions
-  * Work in a fork of this repository
-  * Work in a branch on your fork
-  * Write all of your code in a directory named `lab-` + `<your name>` **e.g.** `lab-duncan`
-  * Submit a pull request to this repository
-  * Submit a link to your pull request on canvas
-  * Submit a question, observation, and how long you spent on canvas  
+heroku: http://khoa-34-asynchronous-actions.herokuapp.com  
+PR: https://github.com/khuynh92/33-redux-middleware/pull/1  
+Travis: https://travis-ci.com/khuynh92/33-redux-middleware    
 
-## Requirements  
-#### Configuration  
+# LAB 34-asynchronous-actions
 
-##### backend/
-  * copy your lab-14 or comparable api into into a backend directory
+This project is the front end side for LAB-14.
 
-##### frontend/
-  * Follow standard conventions, see previous labs for reference.
- 
-#### Feature Tasks 
-  * Create a frontend for your lab-14-two-resource-api or week 5 project
-  * You can also choose to use a comparable RESTful api that does not have auth (must permit full CRUD)
-  * You are only required to create CRUD operations for a single resource of your backend
-  * Use react/redux best practices
-  * Add validation in your redux routes
-  * Add reporter and thunk middleware to your redux store
-  * make async action creators for making ajax request to your backend
-  * make sync action creators from updating your app store
+<!-- ## To install
+Download this repo and in the root directory, type in to the CLI `npm i` to install all dependencies 
 
-#### Test
-  * Test your redux reducers 
-  * Test your util methods (if any)
+## To Run
+Type into the cli of the root directory `npm run watch` to start the react app. A new window will open in your default browser
 
-## Stretch Goals
-  * Create full crud for two resources 
+## How To Use the App
+To use the app, Click on Dashboard. Fill in the form with a Category, and Budget(numbers only). Upon submit, you will be displayed a list of created categories. To remove categories, simply click on the red x next to the title.
 
-#### Documentation  
-Write a description of the project in your README.md, including detailed instructions for how to build your app. In your frontend README.md add a code block with your frontend .env vars, and in your backend README.md add a code block with your backend .env vars. 
+To Enter Category edit mode, `double click` a category. A new form will appear where you can change the contents of the category. Hit `update` to change the contents, or revert back to the old content with `cancel`
+
+To add an Expense to a Category, click the green + button and fill out the form. 
+
+To edit an Expense, double click on the expense you want to edit. Submit to change the expense, or cancel to revert to the previous state. -->
