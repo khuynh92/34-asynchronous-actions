@@ -6,7 +6,9 @@ Travis: https://travis-ci.com/khuynh92/33-redux-middleware
 
 # LAB 34-asynchronous-actions
 
-This project is the front end side for LAB-14. This can be run locally or on Heroku
+This project is the front end side for LAB-14. Lab 34 demo can be seen on the heroku link above, or downloaded to be run locally. 
+
+This project utilizes MONGODB as a database for storing pizzas, and React for the front facing app.
 
 ## To install
 Download this repo and in the root directory, type in to the CLI `npm i` to install all dependencies 
