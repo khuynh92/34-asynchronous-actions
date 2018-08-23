@@ -4,7 +4,7 @@
   "description": "This project is a basic introduction into react.",
   "main": "index.js",
   "scripts": {
-    "test": "jest --collectCoverageFrom=__tests__/**/*.test.js --collectCoverageFrom=!backend/__test__/**/*.spec.js",
+    "test": "jest",
     "watch": "webpack-dev-server --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js",
     "start": "node ./src/server.js",
@@ -13,6 +13,13 @@
   "jest": {
     "transformIgnorePatterns": [
       "<rootDir>/node_modules/"
+    ],
+    "collectCoverageFrom": [
+      "<rootDir>/__tests__/**/*.test.js",
+      "!backend/__test__/**/*.spec.js",
+      "!<rootDir>/node_modules/",
+      "!<rootDir>/backend/node_modules/",
+      "!<rootDir>/path/to/dir/"
     ],
     "moduleNameMapper": {
       "^.+\\.(css|scss)$": "identity-obj-proxy"
