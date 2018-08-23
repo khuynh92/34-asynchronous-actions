@@ -9,7 +9,7 @@ Travis: https://travis-ci.com/khuynh92/33-redux-middleware
 This project is the front end side for LAB-14. Lab 34 demo can be seen on the heroku link above, or downloaded to be run locally. 
 
 This project utilizes MONGODB as a database for storing pizzas, and React for the front facing app.
-##Heroku start:
+## Heroku start:
 To launch the page without download, click on the heroku link above.
 ***NOTE***both the front end and back end version of this app run on heroku's free dynos. ensure the backend site (https://khoa-14-relationship-modeling.herokuapp.com/) is running to ensure complete functionality.
 ## To install
