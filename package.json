@@ -13,7 +13,7 @@
   "jest": {
     "transformIgnorePatterns": [
       "<rootDir>/node_modules/",
-      "<rootDir>/backend/__test__"
+      "<rootDir>/backend/__test__/*"
     ],
     "moduleNameMapper": {
       "^.+\\.(css|scss)$": "identity-obj-proxy"
