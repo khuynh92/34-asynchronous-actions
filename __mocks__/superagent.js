@@ -15,5 +15,6 @@ const post = (path) => {
 export default {
   get: () => Promise.resolve(getObj),
   post: post,
+  send: () => console.log
 };
 

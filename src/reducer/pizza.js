@@ -16,6 +16,7 @@ export const pizzaReducer  = (state = initialState, action) => {
 
     case 'CHANGE_EDIT': return state.map(pizza => pizza._id === payload._id ? {...pizza, editing: true} : {...pizza, editing:false});
 
+    case 'HANDLE_CANCEL': return state.map(pizza => ({...pizza, editing: false}));
 
     default: return state;
   }

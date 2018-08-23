@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 
+import './PizzaForm.scss';
 export default class PizzaForm extends Component {
 
   state = {
@@ -30,7 +31,7 @@ export default class PizzaForm extends Component {
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
+      <form id={this.props.formId} onSubmit={this.handleSubmit}>
         <label>
           Name:
           <input type="text" value={this.state.type} name="type" onChange={this.handleChange} />

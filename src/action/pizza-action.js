@@ -30,6 +30,13 @@ export const changeEdit = pizza => {
   };
 };
 
+export const handleCancel = pizza => {
+  return {
+    type: 'HANDLE_CANCEL',
+    payload: pizza,
+  };
+};
+
 //error handler
 export const handleError = error => {
   return {
