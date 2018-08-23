@@ -4,7 +4,7 @@
   "description": "This project is a basic introduction into react.",
   "main": "index.js",
   "scripts": {
-    "test": "jest __tests__/src  --forceExit",
+    "test": "jest --forceExit",
     "watch": "webpack-dev-server --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js",
     "start": "node ./src/server.js",
