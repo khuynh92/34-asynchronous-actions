@@ -4,7 +4,7 @@
   "description": "This project is a basic introduction into react.",
   "main": "index.js",
   "scripts": {
-    "test": "jest --forceExit",
+    "test": "jest --collectCoverageFrom=__tests__/**/*.test.js --collectCoverageFrom=!backend/**/*.spec.js",
     "watch": "webpack-dev-server --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js",
     "start": "node ./src/server.js",
@@ -12,8 +12,7 @@
   },
   "jest": {
     "transformIgnorePatterns": [
-      "<rootDir>/node_modules/",
-      "<rootDir>/backend/__test__/*"
+      "<rootDir>/node_modules/"
     ],
     "moduleNameMapper": {
       "^.+\\.(css|scss)$": "identity-obj-proxy"
