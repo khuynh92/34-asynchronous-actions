@@ -23,7 +23,9 @@ webpackConfig.plugins = [
     template: `${__dirname}/src/index.html`,
   }),
   new DefinePlugin({
-    'process.env.API_URL': JSON.stringify(process.env.API_URL),
+    'process.env': {
+      API_URL: JSON.stringify(process.env.API_URL),
+    },
     PRODUCTION: production,
   }),
 ];
