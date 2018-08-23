@@ -41,33 +41,34 @@ export const handleError = error => {
 //thunk
 export const fetchAllThunk = () => {
   return dispatch => {
-    superagent.get('https://khoa-14-relationship-modeling.herokuapp.com/api/v1/pizza')
+    return superagent.get(process.env.API_URL)
       .then(pizzas => {
-        return JSON.parse(pizzas.text);
+         return JSON.parse(pizzas.text);
       })
       .then(pizzas => {
-        dispatch(fetchAll(pizzas));
+        return dispatch(fetchAll(pizzas));
       })
       .catch(err => {
-        handleError(err);
+        return handleError(err);
       });
   };
 };
 
 export const addOneThunk = (pizza) => {
   return dispatch => {
-    return superagent.post('https://khoa-14-relationship-modeling.herokuapp.com/api/v1/pizza')
+    return superagent.post(process.env.API_URL)
       .send(pizza)
       .then(response => {
         return response.body;
       })
       .then(pizza => {
-        dispatch(addOne(pizza));
+        return dispatch(addOne(pizza));
       })
       .catch(err => {
+        console.log(err);
         let errMsg = err.response.body.error;
         if (errMsg.includes('validation failed')) {
-          dispatch(handleError(errMsg));
+          return dispatch(handleError(errMsg));
         }
       });
   };
@@ -75,7 +76,7 @@ export const addOneThunk = (pizza) => {
 
 export const updateOneThunk = (pizza) => {
   return dispatch => {
-    superagent.put(`https://khoa-14-relationship-modeling.herokuapp.com/api/v1/pizza/${pizza._id}`)
+    return superagent.put(`${process.env.API_URL}/${pizza._id}`)
       .send(pizza)
       .then(response => {
         return response.body;
@@ -91,7 +92,7 @@ export const updateOneThunk = (pizza) => {
 
 export const deleteOneThunk = (pizza) => {
   return dispatch => {
-    superagent.delete(`https://khoa-14-relationship-modeling.herokuapp.com/api/v1/pizza/${pizza._id}`)
+    return superagent.delete(`${process.env.API_URL}/${pizza._id}`)
       .then(response => {
         return response.text;
       })
