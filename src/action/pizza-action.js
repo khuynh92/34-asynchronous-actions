@@ -48,7 +48,7 @@ export const handleError = error => {
 //thunk
 export const fetchAllThunk = () => {
   return dispatch => {
-    return superagent.get(process.env.API_URL)
+    return superagent.get(`${process.env.API_URL}/api/v1/pizza`)
       .then(pizzas => {
          return JSON.parse(pizzas.text);
       })
@@ -63,7 +63,7 @@ export const fetchAllThunk = () => {
 
 export const addOneThunk = (pizza) => {
   return dispatch => {
-    return superagent.post(process.env.API_URL)
+    return superagent.post(`${process.env.API_URL}/api/v1/pizza`)
       .send(pizza)
       .then(response => {
         return response.body;
@@ -83,7 +83,7 @@ export const addOneThunk = (pizza) => {
 
 export const updateOneThunk = (pizza) => {
   return dispatch => {
-    return superagent.put(`${process.env.API_URL}/${pizza._id}`)
+    return superagent.put(`${process.env.API_URL}/api/v1/pizza/${pizza._id}`)
       .send(pizza)
       .then(response => {
         return response.body;
@@ -99,7 +99,7 @@ export const updateOneThunk = (pizza) => {
 
 export const deleteOneThunk = (pizza) => {
   return dispatch => {
-    return superagent.delete(`${process.env.API_URL}/${pizza._id}`)
+    return superagent.delete(`${process.env.API_URL}/api/v1/pizza/${pizza._id}`)
       .then(response => {
         return response.text;
       })
