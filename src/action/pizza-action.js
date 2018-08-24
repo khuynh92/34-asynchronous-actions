@@ -50,7 +50,7 @@ export const fetchAllThunk = () => {
   return dispatch => {
     return superagent.get(`${process.env.API_URL}/api/v1/pizza`)
       .then(pizzas => {
-         return JSON.parse(pizzas.text);
+        return JSON.parse(pizzas.text);
       })
       .then(pizzas => {
         return dispatch(fetchAll(pizzas));
