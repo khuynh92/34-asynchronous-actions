@@ -39,3 +39,18 @@ You can view the toppings for each Pizza by clicking the pizza name. Notice that
 To edit a pizza, double click on the name.
 
 To Delete, click on the x next to the pizza.
+
+### Environment Variables
+
+#### Back end
+
+```
+PORT = 3000
+MONGODB_URI = 'mongodb://localhost/lab_14'
+```
+
+#### Front end
+
+```
+API_URL =http://localhost:3000
+```
